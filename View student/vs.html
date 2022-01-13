@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Analysis System</title>
+    <link rel="stylesheet" href="vs.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault(); onformsubmit();" autocomplete="off">
+                    <div>
+                        <label>Student Id</label>
+                        <input type="number" name="studentid" id="studentid">
+                    </div>
+                    <div>
+                        <label>Full Name</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>Email</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div>
+                        <label>Phone Number</label>
+                        <input type="text" name="number" id="number">
+                    </div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="studentlist">
+                    <thead>
+                        <tr>
+                            <th>Student Id</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script src="vs.js"></script>
+    
+</body>
+</html>

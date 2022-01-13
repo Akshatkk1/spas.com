@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sl.css">
+</head>
+<body>
+<div class="container">
+<div class="card">
+<div class="inner-box" id="card">
+<div class="card-front">
+    <h2>STUDENT LOGIN</h2>
+    <form>
+        <input type="student id" class="input-box" placeholder="Enter Student id" id="Studentid" required>
+        <input type="password" class="input-box" placeholder="Enter Password" id="Password" required>
+        <button type="submit" class="submit-btn">Login</button>
+        <input type="checkbox"><span>Remember Me</span>
+    </form>
+    <button type="button" class="btn" onclick="openRegister()">I'm New Here</button>
+    <a href="">Forgot Password</a>
+</div>
+<div class="card-back">
+    <h2>REGISTER</h2>
+    <form class="student-register" action="student.html" method="post"></form>
+    <form action="connect.php" method="post">
+        <input type="text" class="input-box" placeholder="Your First Name" id="firstName" name="firstname" required>
+        <input type="text" class="input-box" placeholder="Your Last Name" id="lastName" name="lastname" required>
+        <input type="email" class="input-box" placeholder="Your Email Id" id="email" name="email" required>
+        <input type="number" class="input-box" placeholder="Your Phone Number" id="number" name="number" required>
+        <input type="password" class="input-box" placeholder="Enter Password" id="Password" name="password" required>
+        <button type="submit" class="submit-btn">Submit</button>
+        <input type="checkbox"><span>Remember Me</span>
+    </form>
+    <button type="button" class="btn" onclick="openLogin()">I've an account</button>
+    <a href="">Forgot Password</a>
+</div>
+</div>
+</div>
+</div>
+
+   <script>
+       var card = document.getElementById("card");
+
+       function openRegister(){
+           card.style.transform = "rotateY(-180deg)";
+       }
+       function openLogin(){
+           card.style.transform = "rotateY(0deg)";
+       }
+   </script>
+   <script rel="javascript">  
+    function validate()
+    {
+        var Studentid=document.getElementById("Student id").value;
+        var password=document.getElementById("Password").value;
+        if(Studentid=="111" && password=="abc")
+        {
+            alert("login successfully");
+            window.location.href="student.html";
+        }
+        else
+        {
+            alert("login failed");
+        }
+    }
+</script>
+
+</body>
+</html> 
